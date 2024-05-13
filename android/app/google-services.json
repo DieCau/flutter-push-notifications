@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "596915010938",
+    "project_id": "push-notifications-app-2df89",
+    "storage_bucket": "push-notifications-app-2df89.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:596915010938:android:ec7268967438f076946ac3",
+        "android_client_info": {
+          "package_name": "app.diegocaucota.push_notifications_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUP7yhpoohw8qV0_n59cmPE39y5kQbgi4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
