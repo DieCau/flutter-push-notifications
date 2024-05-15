@@ -20,7 +20,12 @@ class _LoginPageState extends State<LoginPage> {
           height: double.infinity,
           width: double.infinity,
           decoration: const BoxDecoration(
-            gradient: LinearGradient(colors: [Colors.blue, Colors.purple]),
+            gradient: LinearGradient(
+              colors: [
+                Colors.blue, 
+                Colors.purple
+              ]
+            ),
           ),
           child: Stack(
             children: [
@@ -72,6 +77,38 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
               ),
+              Positioned(
+                bottom: 420,
+                right: 180,
+                child: Container(
+                height: 60,
+                width: 60,
+                decoration: const BoxDecoration(
+                  shape: BoxShape.circle,
+                  gradient: LinearGradient(
+                    colors: [
+                      Colors.purple, 
+                      Colors.blue
+                    ]),
+                  ),
+                ),
+              ),
+              Positioned(
+                top: 280,
+                right: 100,
+                child: Container(
+                height: 100,
+                width: 100,
+                decoration: const BoxDecoration(
+                  shape: BoxShape.circle,
+                  gradient: LinearGradient(
+                    colors: [
+                      Colors.purple, 
+                      Colors.blue
+                    ]),
+                  ),
+                ),
+              ),
               SingleChildScrollView(
                 padding: const EdgeInsets.only(top: 250),
                 child: Column(
@@ -80,6 +117,8 @@ class _LoginPageState extends State<LoginPage> {
                     emailField(),
                     passwordField(),
                     forgotPassword(),
+                    loginButton(),
+                    registerButton(),
                   ],
                 ),
               ),
@@ -190,7 +229,7 @@ class _LoginPageState extends State<LoginPage> {
     return Align(
       alignment: Alignment.centerRight,      
       child: Padding(
-        padding: const EdgeInsets.only(top: 15.0, right: 60, bottom: 100),
+        padding: const EdgeInsets.only(top: 15.0, right: 60, bottom: 50),
         child: InkWell(
           onTap: (){},
           child: const Text(
@@ -205,4 +244,80 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
   }
+  
+  Widget loginButton() {
+    return GestureDetector(
+      onTap: () {},
+      child: Container(
+        alignment: Alignment.center,
+        margin: const EdgeInsets.symmetric(horizontal: 60).copyWith(bottom: 15),
+        height: 50,
+        width: double.infinity,
+        decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              offset: const Offset(3, 3),
+              blurRadius: 4,
+              spreadRadius: 1,
+              color: Colors.black12.withOpacity(0.08),
+            )
+          ],
+          borderRadius: BorderRadius.circular(40).copyWith(topRight: const Radius.circular(0)),
+          gradient: const LinearGradient(
+            colors: [
+              Colors.blue,
+              Colors.purple, 
+            ]
+          ),
+        ),
+        child: const Text(
+          'Sign In',
+          style: TextStyle(
+            color: Colors.white70,
+            fontSize: 16,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+      ),
+    ); 
+  }
+  
+  Widget registerButton() {
+    return GestureDetector(
+      onTap: () {},
+      child: Container(
+        alignment: Alignment.center,
+        margin: const EdgeInsets.symmetric(horizontal: 60).copyWith(bottom: 15),
+        height: 50,
+        width: double.infinity,
+        decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              offset: const Offset(3, 3),
+              blurRadius: 4,
+              spreadRadius: 1,
+              color: Colors.black12.withOpacity(0.08),
+            )
+          ],
+          borderRadius: BorderRadius.circular(40).copyWith(topRight: const Radius.circular(0)),
+          gradient: const LinearGradient(
+            colors: [
+              Colors.purple, 
+              Colors.blue,
+            ]
+          ),
+        ),
+        child: const Text(
+          'Register',
+          style: TextStyle(
+            color: Colors.white70,
+            fontSize: 16,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+      ),
+    ); 
+  }
+
+
 }
